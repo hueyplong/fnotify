@@ -55,7 +55,7 @@ sub filewrite {
 	my ($text) = @_;
 	# FIXME: there is probably a better way to get the irssi-dir...
         open(FILE,">>$ENV{HOME}/.irssi/fnotify");
-	$text = strftime(
+        $text = strftime(
             Irssi::settings_get_str('timestamp_format')." ",
             localtime
         ).$text;
